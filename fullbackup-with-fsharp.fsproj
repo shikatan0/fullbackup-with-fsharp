@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>fullbackup_with_fsharp</RootNamespace>
+    <WarnOn>3390;$(WarnOn)</WarnOn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="module\Utils\PowrProf.fs" />
+    <Compile Include="module\Utils\FileName.fs" />
+    <Compile Include="module\Utils\Http.fs" />
+    <Compile Include="module\Utils\Backoff.fs" />
+    <Compile Include="module\Utils\PatternToRegex.fs" />
+    <Compile Include="module\Utils\ExecutionTime.fs" />
+
+    <Compile Include="Settings.fs" />
+
+    <Compile Include="module\GoogleDrive\StatusCode.fs" />
+    <Compile Include="module\GoogleDrive\AccessToken\Get.fs" />
+    <Compile Include="module\GoogleDrive\AccessToken\Refresh.fs" />
+    <Compile Include="module\GoogleDrive\File\Upload.fs" />
+    <Compile Include="module\GoogleDrive\File\Delete.fs" />
+    <Compile Include="module\GoogleDrive\File\GetIdList.fs" />
+
+    <Compile Include="module\LocalDrive\Ignore.fs" />
+    <Compile Include="module\LocalDrive\Zip.fs" />
+
+    <Compile Include="module\App\LocalBackup.fs" />
+    <Compile Include="module\App\CloudBackup.fs" />
+
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+</Project>
